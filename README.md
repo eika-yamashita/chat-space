@@ -33,7 +33,7 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - hash_many :chats
-- hash_many :groups
+- hash_many :groups, through: :groups_users
 
 ## chatテーブル
 |Column|Type|Options|
@@ -53,7 +53,7 @@ Things you may want to cover:
 |group_name|string|null: false|
 |group_id|integer|foreign_key: true|
 ### Association
-- hash_many :users
+- hash_many :users, through: :groups_users
 - hash_many :chat
 
 ## groups_usersテーブル
