@@ -24,7 +24,8 @@ Things you may want to cover:
 * ...
 
 ## userテーブル
-|Colum|Type|Option|
+|Column|Type|Options|
+|------|----|-------|
 |id|integer|primary_key: true|
 |name|string|null: false|
 |mail|string|null: false, unique: true|
@@ -35,7 +36,8 @@ Things you may want to cover:
 - hash_many :groups
 
 ## chatテーブル
-|Colum|Type|Option|
+|Column|Type|Options|
+|------|----|-------|
 |id|integer|
 |text|text|null: false|
 |image|string|
@@ -45,7 +47,8 @@ Things you may want to cover:
 - belong_to :group
 
 ## groupテーブル
-|Colum|Type|Option|
+|Column|Type|Options|
+|------|----|-------|
 |id|integer|primary_key: true|
 |group_name|string|null: false|
 |group_id|integer|foreign_key: true|
