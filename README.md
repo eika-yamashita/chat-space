@@ -39,9 +39,10 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|
-|text|text|null: false|
+|text|text|
 |image|string|
-|chat_id|integer|foreign_key: true|
+|user_id|integer|foreign_key: true|
+|group_id|integer|foreign_key: true|
 ### Association
 - belong_to :user
 - belong_to :group
@@ -50,11 +51,11 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key: true|
-|group_name|string|null: false|
-|group_id|integer|foreign_key: true|
+|name|string|null: false|
 ### Association
 - hash_many :users, through: :groups_users
-- hash_many :chat
+- hash_many :chats
+- hash_many :groups_users
 
 ## groups_usersテーブル
 |Column|Type|Options|
