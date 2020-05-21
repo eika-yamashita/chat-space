@@ -30,10 +30,10 @@ Things you may want to cover:
 |name|string|null: false|
 |mail|string|null: false, unique: true|
 |pass|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
 ### Association
 - hash_many :chats
 - hash_many :groups, through: :groups_users
+- hash_many :groups_users
 
 ## chatテーブル
 |Column|Type|Options|
