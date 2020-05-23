@@ -1,0 +1,20 @@
+%div.chat-bar
+  %div.chat-bar__user-name
+    %div.top-items
+      %div.top-items__name
+        masa
+      %ul.top-items__icons
+        = link_to "#" do
+          = icon('fas', 'edit', class: 'icon')
+        = link_to "#" do
+          = icon('fas', 'cog', class: 'icon')
+
+  %div.chat-bar__group-list
+    %div.group-list
+      %p.group-list__name
+        techcamp
+      %p.group-list__message
+        まだメッセージがありません
+
+
+
