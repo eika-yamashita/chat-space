@@ -24,21 +24,13 @@
         color: white;
         margin:0px 20px;
         font-weight: bold;
-        
-        
-        &__name{
-          
-        }
         &__icons{
           width: 60px;
           height: 20px;
           margin-left: 5px;
           text-align: right;
-          
-          
           .icon {
             color: white;
-            
           }
         }
       }
@@ -50,14 +42,12 @@
       .group-list{
         color: white;
         margin-bottom: 40px;
-
         &__name{
           font-size: 15px;
           margin-bottom: 5px;
         }
         &__message{
           font-size: 11px;
-  
         }
       }
     }
@@ -73,7 +63,6 @@
       padding: 0 40px;
       display: flex;
       justify-content: space-between;
-
       .group-info__left{
         margin-top: 35px;
         &__up{
@@ -98,7 +87,6 @@
         a {
           color: #38aef0;
         }
-
       }
     }
     .chat-main__message-lists{
@@ -134,11 +122,9 @@
       padding: 20px 40px;
       form {
         display: flex;
-
         .input-box{
           position: relative;
           width: 100%;
-
           &__text{
             height: 50px;
             width: 100%;
@@ -156,7 +142,6 @@
             }
           }
         }
-
         .submit-btn{
           width: 100px;
           height: 50px;
