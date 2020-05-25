@@ -39,15 +39,19 @@
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding: 20px;
-      .group-list{
-        color: white;
+      .group{
         margin-bottom: 40px;
-        &__name{
-          font-size: 15px;
-          margin-bottom: 5px;
-        }
-        &__message{
-          font-size: 11px;
+        &-link {
+          text-decoration: none;
+          &__name{
+            color: white;
+            font-size: 15px;
+            margin-bottom: 5px;
+          }
+          &__message{
+            color: white;
+            font-size: 11px;
+          }
         }
       }
     }
