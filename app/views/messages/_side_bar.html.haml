@@ -2,7 +2,7 @@
   .chat-bar__user-name
     .top-items
       .top-items__name
-        masa
+        = current_user.name
       %ul.top-items__icons
         = link_to new_group_path(current_user) do
           = icon('fas', 'edit', class: 'icon')
