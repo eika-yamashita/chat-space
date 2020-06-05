@@ -3,33 +3,37 @@ $(function(){
    if ( message.image ) {
      var html =
       `<div class="chat-main__message-list" data-message-id=${message.id}>
-        <div class="message__info-taker">
-          ${message.user_name}
-        </div>
-        <div class="message__info-date">
-          ${message.created_at}
-        </div>
+        <div class=""message__info">
+          <div class="message__info-taker">
+            ${message.user_name}
+          </div>
+          <div class="message__info-date">
+            ${message.created_at}
+          </div>
         <div class="message__text">
           <p class="lower-message__content">
             ${message.text}
           </p>
         </div>
         <img src=${message.image} >
+        </div>
       </div>`
     return html;
   } else {
     var html =
       `<div class="chat-main__message-list" data-message-id=${message.id}>
-        <div class="message__info-taker">
-          ${message.user_name}
-        </div>
-        <div class="message__info-date">
-          ${message.created_at}
-        </div>
-        <div class="message__text">
+        <div class=""message__info">
+          <p class="message__info-taker">
+            ${message.user_name}
+          </p>
+          <p class="message__info-date">
+            ${message.created_at}
+          </p>
+        <p class="message__text">
           <p class="lower-message__content">
             ${message.text}
           </p>
+        </p>
         </div>
       </div>`
     return html;
@@ -52,11 +56,13 @@ $('#new_message').on('submit', function(e){
     $('.chat-main__message-lists').append(html);
     $('form')[0].reset();
     $('.chat-main__message-lists').animate({ scrollTop: $('.chat-main__message-lists')[0].scrollHeight});
-    $('.submit-btn').prop('disabled', false);
   })
   .fail(function() {
-      alert("メッセージ送信に失敗しました");
-  });
+    alert("メッセージ送信に失敗しました");
+  })
+  .always(function() {
+    $('.submit-btn').prop('disabled', false)
+  })
 })
   var reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
@@ -85,9 +91,9 @@ $('#new_message').on('submit', function(e){
     })
     .fail(function() {
       alert('error');
-    });
+    })
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-    // setInterval(reloadMessages, 1000);
+    setInterval(reloadMessages, 15000);
   }
 });
