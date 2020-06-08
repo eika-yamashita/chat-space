@@ -61,12 +61,16 @@
     height: 100vh;
     width: calc(100vw - 300px);
     float: left;
+    
     &__group-info{
       height: 100px;
       background-color: #ffffff;
       padding: 0 40px;
       display: flex;
       justify-content: space-between;
+      border-bottom: solid 2px #eeeeee;
+      // border-bottom-color: #000000;
+      // border-bottom: 10px;
       .group-info__left{
         margin-top: 35px;
         &__up{
@@ -98,8 +102,7 @@
       background-color: #fafafa;
       padding: 40px;
       overflow:scroll;
-      border-top-color: #000000;
-      border-top: 100px;
+      
       .chat-main__message-list{
         padding-bottom: 40px;
         .message__info{

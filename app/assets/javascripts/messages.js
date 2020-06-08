@@ -3,39 +3,40 @@ $(function(){
    if ( message.image ) {
      var html =
       `<div class="chat-main__message-list" data-message-id=${message.id}>
-        <div class=""message__info">
+        <div class="message__info">
           <div class="message__info-taker">
             ${message.user_name}
           </div>
           <div class="message__info-date">
             ${message.created_at}
           </div>
-        <div class="message__text">
-          <p class="lower-message__content">
-            ${message.text}
-          </p>
         </div>
+        <p class="message__text"></p>
+        <p class="lower-message__content">
+          ${message.text}
+        </p>
         <img src=${message.image} >
-        </div>
+      </div>
       </div>`
     return html;
   } else {
-    var html =
-      `<div class="chat-main__message-list" data-message-id=${message.id}>
-        <div class=""message__info">
-          <p class="message__info-taker">
-            ${message.user_name}
-          </p>
-          <p class="message__info-date">
-            ${message.created_at}
-          </p>
-        <p class="message__text">
-          <p class="lower-message__content">
-            ${message.text}
-          </p>
+    var html =`
+    <div class="chat-main__message-list" data-message-id=${message.id}>
+      <div class="message__info">
+        <p class="message__info-taker">
+          ${message.user_name}
         </p>
-        </div>
-      </div>`
+        <p class="message__info-date">
+          ${message.created_at}
+        </p>
+      </div>  
+      <p class="message__text">
+        <p class="lower-message__content">
+          ${message.text}
+        </p>
+      </p>  
+    </div>
+    `
     return html;
   };
 }
@@ -94,6 +95,6 @@ $('#new_message').on('submit', function(e){
     })
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-    setInterval(reloadMessages, 15000);
+    // setInterval(reloadMessages, 15000);
   }
 });

@@ -5,7 +5,7 @@
         = @group.name
       %p.group-info__left__down
         - @group.users.each do |user|
-          = user.name
+          Membar: #{user.name}
 
     .group-info__raight
       = link_to edit_group_path(@group.id) do
